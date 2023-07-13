@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+}
+.container {
+    width: auto;
+    height: auto;
+    background-color: olivedrab;
+}
+/* nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    margin-top: 50px;
+    width: 47%;
+    border: 2px solid;
+    margin-left: 40%;
+    height: 200px;
+    background-color: tomato;
+} */
+.header ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.header ul li {
+    /* margin-bottom: 1px; */
+    font-size: 15px;
+}
+.header {
+    border: 2px solid;
+}
+.header ul {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+    list-style: none;
+}
+li {
+    color: beige;
+    font-weight: 40px;
+    padding: 15px;
+    cursor: pointer;
+}
+li:hover {
+    color: aqua;
+}
+.cont {
+    width: 300px;
+    height: 300px;
+    border: 2px solid;
+    background-color: slategray;
+    margin-bottom: 10px;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+#burger,
+[for="burger"]{
+    display: none;
+}
+@media (max-width:1300px){
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .cont {
+        background-color: darkmagenta;
+        border-radius: 150px;
+    }
+    .container {
+        background-color: cadetblue;
+    }
+}
+@media (max-width:700px){
+    .cont {
+        width: 500px;
+        height: 500px;
+    }
+}
+@media (max-width:600px){
+    .cont {
+        width: 400px;
+        height: 400px;
+    }
+    nav {
+        /* display: none; */
+        display: none;
+        position: fixed;
+        top: 0;
+        margin-top: 50px;
+        width: 47%;
+        border: 2px solid;
+        margin-left: 40%;
+        height: 200px;
+        background-color: tomato;
+    }
+    [for="burger"]{
+        display: block;
+        position: fixed;
+        right: 20px;
+        top: 10px;
+        text-align: center;
+        font-size: 25px;
+    }
+    [for="burger"]::before{
+        content: '🍔';
+    }
+    #burger:checked+[for="burger"]::before{
+        content: '☰';
+    }
+    #burger:checked+label+nav{
+        display: block;
+    }
+}
